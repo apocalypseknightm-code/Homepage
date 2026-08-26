@@ -1,1 +1,194 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AK黙示録騎士 | Official Site</title>
 
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0b0b12;
+    color: white;
+}
+
+header {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+    background:
+        linear-gradient(rgba(10,10,20,.75), rgba(10,10,20,.95)),
+        radial-gradient(circle at center, #5b1cff, #0b0b12 65%);
+}
+
+.hero h1 {
+    font-size: 42px;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    color: #bbb;
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+
+.button {
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 30px;
+    background: #6c35ff;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    padding: 70px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 35px;
+}
+
+.card {
+    background: #151522;
+    border: 1px solid #29293d;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 18px;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: #9c7cff;
+}
+
+.members {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 15px;
+}
+
+.member {
+    text-align: center;
+    padding: 25px 10px;
+    background: #151522;
+    border-radius: 15px;
+}
+
+.member span {
+    display: block;
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #777;
+    border-top: 1px solid #222;
+}
+
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 32px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="hero">
+        <h1>AK黙示録騎士</h1>
+        <p>FLASH PARTY CLAN OFFICIAL SITE</p>
+        <a href="#about" class="button">ENTER SITE</a>
+    </div>
+</header>
+
+<section id="about">
+    <h2>ABOUT</h2>
+
+    <div class="card">
+        <h3>AK黙示録騎士</h3>
+        <p>
+            FLASH PARTYを中心に活動するゲームクラン。<br>
+            楽しく、そして本気で勝利を目指します。
+        </p>
+    </div>
+</section>
+
+<section>
+    <h2>MEMBERS</h2>
+
+    <div class="members">
+        <div class="member">
+            <span>⚔️</span>
+            Oct.
+        </div>
+
+        <div class="member">
+            <span>🔥</span>
+            Member 02
+        </div>
+
+        <div class="member">
+            <span>🌙</span>
+            Member 03
+        </div>
+
+        <div class="member">
+            <span>⚡</span>
+            Member 04
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>NEWS</h2>
+
+    <div class="card">
+        <h3>2026.08.26</h3>
+        <p>AK黙示録騎士 Official Site 開設。</p>
+    </div>
+
+    <div class="card">
+        <h3>CLAN MATCH</h3>
+        <p>次回対戦情報は後日公開予定。</p>
+    </div>
+</section>
+
+<section>
+    <h2>JOIN US</h2>
+
+    <div class="card">
+        <h3>入隊希望者募集中</h3>
+        <p>
+            一緒にFLASH PARTYを楽しみたい方を募集しています。
+        </p>
+        <br>
+        <a href="#" class="button">入隊について</a>
+    </div>
+</section>
+
+<footer>
+    © 2026 AK黙示録騎士
+</footer>
+
+</body>
+</html>
