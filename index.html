@@ -227,89 +227,10 @@ body::before {
 
 /* ===== MEMBERS ===== */
 
-.members {
-    background:
-        linear-gradient(
-            rgba(5,5,5,.95),
-            rgba(5,5,5,.95)
-        );
-}
 
-.member-grid {
-    display: grid;
-    grid-template-columns:
-        repeat(auto-fit, minmax(180px, 1fr));
-    gap: 20px;
-}
-
-.member {
-    position: relative;
-    padding: 35px 20px;
-    text-align: center;
-
-    background: #101010;
-    border: 1px solid #242424;
-
-    transition: .3s;
-    overflow: hidden;
-}
-
-.member::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 2px;
-
-    background: #e60012;
-    box-shadow: 0 0 15px #e60012;
-
-    transition: .4s;
-}
-
-.member:hover::before {
-    left: 0;
-}
-
-.member:hover {
-    transform: translateY(-7px);
-    border-color: #e60012;
-    box-shadow: 0 10px 35px rgba(230,0,18,.15);
-}
-
-.member-icon {
-    width: 80px;
-    height: 80px;
-
-    margin: auto auto 20px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border: 2px solid #e60012;
-    border-radius: 50%;
-
-    font-size: 35px;
-
-    box-shadow:
-        0 0 20px rgba(230,0,18,.25);
-}
-
-.member-name {
-    font-size: 20px;
-    font-weight: 900;
-}
-
-.member-role {
-    margin-top: 7px;
-    font-family: "Orbitron", sans-serif;
-    font-size: 10px;
-    letter-spacing: 2px;
-    color: #e60012;
-}
-
+<div class="member-name">ミミズク</div>
+<div class="member-name">ステック</div>
+    <div class="member-name">Oct.</div>
 /* ===== RESULTS ===== */
 
 .results {
