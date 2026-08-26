@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AK黙示録騎士 | OFFICIAL</title>
+
+<meta
+    name="description"
+    content="AK黙示録騎士 - FLASH PARTY CLAN OFFICIAL SITE"
+/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap');
+
+
+/* ==================================================
+   RESET
+================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #030303;
+    color: #fff;
+
+    font-family:
+        "Noto Sans JP",
+        sans-serif;
+
+    overflow-x: hidden;
+}
+
+
+/* ==================================================
+   COMMON
+================================================== */
+
+section {
+    position: relative;
+
+    padding:
+        110px 20px;
+
+    overflow: hidden;
+}
+
+.container {
+    width:
+        min(1100px, 100%);
+
+    margin:
+        0 auto;
+}
+
+.section-title {
+    position: relative;
+
+    text-align: center;
+
+    margin-bottom: 55px;
+
+    z-index: 2;
+}
+
+.section-title .en {
+    display: block;
+
+    color: #e60012;
+
+    font-family:
+        "Orbitron",
+        sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 6px;
+
+    margin-bottom: 12px;
+}
+
+.section-title h2 {
+    font-size: 36px;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+}
+
+.section-title h2::after {
+    content: "";
+
+    display: block;
+
+    width: 60px;
+    height: 3px;
+
+    margin:
+        18px auto 0;
+
+    background: #e60012;
+
+    box-shadow:
+        0 0 20px
+        rgba(230,0,18,.9);
+}
+
+
+/* ==================================================
+   GLOBAL BACKGROUND
+================================================== */
+
+body::before {
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: -3;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            115deg,
+            transparent 0%,
+            rgba(230,0,18,.025) 42%,
+            rgba(230,0,18,.13) 50%,
+            transparent 58%
+        );
+}
+
+body::after {
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 999;
+
+    pointer-events: none;
+
+    background:
+        repeating-linear-gradient(
+            0deg,
+            rgba(255,255,255,.015) 0px,
+            rgba(255,255,255,.015) 1px,
+            transparent 1px,
+            transparent 4px
+        );
+
+    opacity: .3;
+}
+
+
+/* ==================================================
+   HERO
+================================================== */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(230,0,18,.25),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #010101,
+            #090909 55%,
+            #030303
+        );
+}
+
+
+/* 巨大ロゴ */
+
+.hero-logo-bg {
+    position: absolute;
+
+    width: 850px;
+
+    max-width: 90vw;
+
+    opacity: .055;
+
+    filter:
+        grayscale(1)
+        drop-shadow(
+            0 0 40px
+            rgba(230,0,18,.8)
+        );
+
+    transform:
+        rotate(-8deg);
+
+    pointer-events: none;
+
+    animation:
+        slowFloat
+        8s
+        ease-in-out
+        infinite;
+}
+
+
+/* 赤い斜線 */
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 160%;
+    height: 180px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(230,0,18,.18),
+            transparent
+        );
+
+    transform:
+        rotate(-12deg);
+
+    animation:
+        slashMove
+        7s
+        linear
+        infinite;
+}
+
+
+/* グリッド */
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            rgba(255,255,255,.025) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.025) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        50px 50px;
+
+    mask-image:
+        linear-gradient(
+            to bottom,
+            transparent,
+            black 25%,
+            black 75%,
+            transparent
+        );
+}
+
+
+.hero-content {
+    position: relative;
+
+    z-index: 3;
+
+    width: 100%;
+
+    padding: 30px;
+}
+
+
+/* メインロゴ */
+
+.logo {
+    width:
+        min(280px, 65vw);
+
+    max-height: 280px;
+
+    object-fit: contain;
+
+    margin-bottom: 25px;
+
+    filter:
+        drop-shadow(
+            0 0 15px
+            rgba(230,0,18,.7)
+        )
+        drop-shadow(
+            0 0 45px
+            rgba(230,0,18,.35)
+        );
+
+    animation:
+        logoFloat
+        4s
+        ease-in-out
+        infinite;
+}
