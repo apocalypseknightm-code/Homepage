@@ -3,109 +3,472 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AK黙示録騎士 | Official Site</title>
+
+<title>AK黙示録騎士 | OFFICIAL</title>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Noto+Sans+JP:wght@400;700;900&display=swap');
+
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background: #0b0b12;
-    color: white;
+    background: #050505;
+    color: #fff;
+    font-family: "Noto Sans JP", sans-serif;
+    overflow-x: hidden;
 }
 
-header {
+/* ===== 共通 ===== */
+
+section {
+    position: relative;
+    padding: 90px 20px;
+}
+
+.container {
+    width: min(1100px, 100%);
+    margin: auto;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title .en {
+    display: block;
+    font-family: "Orbitron", sans-serif;
+    font-size: 13px;
+    letter-spacing: 5px;
+    color: #e60012;
+    margin-bottom: 8px;
+}
+
+.section-title h2 {
+    font-size: 32px;
+    font-weight: 900;
+}
+
+.section-title h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #e60012;
+    margin: 15px auto 0;
+    box-shadow: 0 0 15px #e60012;
+}
+
+/* ===== 背景 ===== */
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+
+    background:
+        linear-gradient(
+            115deg,
+            transparent 0%,
+            rgba(230,0,18,.04) 45%,
+            rgba(230,0,18,.12) 50%,
+            transparent 55%
+        );
+}
+
+/* ===== HERO ===== */
+
+.hero {
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 30px;
+
     background:
-        linear-gradient(rgba(10,10,20,.75), rgba(10,10,20,.95)),
-        radial-gradient(circle at center, #5b1cff, #0b0b12 65%);
+        radial-gradient(
+            circle at center,
+            rgba(230,0,18,.25),
+            transparent 40%
+        ),
+        linear-gradient(#030303, #090909);
+
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 700px;
+    height: 700px;
+    border: 1px solid rgba(230,0,18,.15);
+    border-radius: 50%;
+    animation: rotate 20s linear infinite;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    border: 1px solid rgba(255,255,255,.05);
+    transform: rotate(45deg);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 30px;
+}
+
+.logo {
+    width: min(300px, 75vw);
+    max-height: 300px;
+    object-fit: contain;
+
+    margin-bottom: 25px;
+
+    filter:
+        drop-shadow(0 0 10px rgba(230,0,18,.5))
+        drop-shadow(0 0 35px rgba(230,0,18,.3));
+
+    animation: logoFloat 4s ease-in-out infinite;
 }
 
 .hero h1 {
-    font-size: 42px;
-    letter-spacing: 3px;
-    margin-bottom: 15px;
+    font-family: "Orbitron", sans-serif;
+    font-size: clamp(30px, 8vw, 65px);
+    font-weight: 900;
+    letter-spacing: 4px;
+
+    text-shadow:
+        0 0 10px rgba(230,0,18,.8),
+        0 0 30px rgba(230,0,18,.4);
 }
 
-.hero p {
-    color: #bbb;
-    font-size: 17px;
-    margin-bottom: 30px;
+.hero-sub {
+    margin-top: 12px;
+    color: #aaa;
+    font-family: "Orbitron", sans-serif;
+    font-size: 13px;
+    letter-spacing: 5px;
 }
 
-.button {
+.hero-buttons {
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
     display: inline-block;
-    padding: 14px 28px;
-    border-radius: 30px;
-    background: #6c35ff;
+    padding: 14px 30px;
     color: white;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 900;
+    letter-spacing: 1px;
+
+    border: 1px solid #e60012;
+    background: rgba(230,0,18,.1);
+
+    transition: .3s;
 }
 
-section {
-    padding: 70px 20px;
-    max-width: 900px;
+.btn:hover {
+    background: #e60012;
+    box-shadow: 0 0 25px rgba(230,0,18,.7);
+    transform: translateY(-3px);
+}
+
+.btn-red {
+    background: #e60012;
+}
+
+/* ===== ABOUT ===== */
+
+.about {
+    background: #090909;
+}
+
+.about-box {
+    max-width: 800px;
     margin: auto;
+    padding: 35px;
+
+    background: linear-gradient(
+        135deg,
+        #111,
+        #080808
+    );
+
+    border-left: 3px solid #e60012;
+
+    box-shadow:
+        0 0 40px rgba(0,0,0,.7);
 }
 
-h2 {
+.about-box p {
+    color: #bbb;
+    line-height: 2;
     text-align: center;
-    font-size: 30px;
-    margin-bottom: 35px;
 }
 
-.card {
-    background: #151522;
-    border: 1px solid #29293d;
-    border-radius: 15px;
-    padding: 25px;
-    margin-bottom: 18px;
-}
-
-.card h3 {
-    margin-bottom: 10px;
-    color: #9c7cff;
-}
+/* ===== MEMBERS ===== */
 
 .members {
+    background:
+        linear-gradient(
+            rgba(5,5,5,.95),
+            rgba(5,5,5,.95)
+        );
+}
+
+.member-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 15px;
+    grid-template-columns:
+        repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
 }
 
 .member {
+    position: relative;
+    padding: 35px 20px;
     text-align: center;
-    padding: 25px 10px;
-    background: #151522;
-    border-radius: 15px;
+
+    background: #101010;
+    border: 1px solid #242424;
+
+    transition: .3s;
+    overflow: hidden;
 }
 
-.member span {
-    display: block;
-    font-size: 35px;
-    margin-bottom: 10px;
+.member::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+
+    background: #e60012;
+    box-shadow: 0 0 15px #e60012;
+
+    transition: .4s;
 }
+
+.member:hover::before {
+    left: 0;
+}
+
+.member:hover {
+    transform: translateY(-7px);
+    border-color: #e60012;
+    box-shadow: 0 10px 35px rgba(230,0,18,.15);
+}
+
+.member-icon {
+    width: 80px;
+    height: 80px;
+
+    margin: auto auto 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 2px solid #e60012;
+    border-radius: 50%;
+
+    font-size: 35px;
+
+    box-shadow:
+        0 0 20px rgba(230,0,18,.25);
+}
+
+.member-name {
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.member-role {
+    margin-top: 7px;
+    font-family: "Orbitron", sans-serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #e60012;
+}
+
+/* ===== RESULTS ===== */
+
+.results {
+    background: #090909;
+}
+
+.result {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 22px;
+    margin-bottom: 12px;
+
+    background: #111;
+    border: 1px solid #222;
+}
+
+.result-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.result-date {
+    color: #666;
+    font-size: 11px;
+}
+
+.result-opponent {
+    font-weight: 900;
+    margin-top: 5px;
+}
+
+.win {
+    color: #e60012;
+    font-family: "Orbitron", sans-serif;
+    font-weight: 900;
+}
+
+.score {
+    font-family: "Orbitron", sans-serif;
+    font-size: 22px;
+    font-weight: 900;
+}
+
+/* ===== NEWS ===== */
+
+.news-card {
+    padding: 25px;
+    margin-bottom: 15px;
+
+    background: #101010;
+    border: 1px solid #222;
+
+    transition: .3s;
+}
+
+.news-card:hover {
+    border-color: #e60012;
+}
+
+.news-date {
+    color: #e60012;
+    font-family: "Orbitron", sans-serif;
+    font-size: 11px;
+}
+
+.news-title {
+    margin-top: 8px;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+/* ===== JOIN ===== */
+
+.join {
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(230,0,18,.2),
+            transparent 50%
+        ),
+        #050505;
+}
+
+.join h2 {
+    font-family: "Orbitron", sans-serif;
+    font-size: 35px;
+}
+
+.join p {
+    color: #aaa;
+    margin: 20px 0 30px;
+}
+
+/* ===== FOOTER ===== */
 
 footer {
+    padding: 35px 20px;
     text-align: center;
-    padding: 30px;
-    color: #777;
+
     border-top: 1px solid #222;
+
+    color: #555;
+    font-family: "Orbitron", sans-serif;
+    font-size: 10px;
+    letter-spacing: 2px;
 }
 
+/* ===== ANIMATION ===== */
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes logoFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+/* ===== MOBILE ===== */
+
 @media (max-width: 600px) {
+
+    section {
+        padding: 70px 15px;
+    }
+
     .hero h1 {
-        font-size: 32px;
+        letter-spacing: 2px;
+    }
+
+    .hero-sub {
+        letter-spacing: 3px;
+    }
+
+    .result {
+        padding: 17px;
+    }
+
+    .score {
+        font-size: 18px;
+    }
+
+    .about-box {
+        padding: 25px 20px;
     }
 }
 </style>
@@ -113,81 +476,242 @@ footer {
 
 <body>
 
-<header>
-    <div class="hero">
+<!-- ===== HERO ===== -->
+
+<header class="hero">
+
+    <div class="hero-content">
+
+        <img
+            src="sfUqRIPD.jpg"
+            alt="AK黙示録騎士 ロゴ"
+            class="logo"
+        >
+
         <h1>AK黙示録騎士</h1>
-        <p>FLASH PARTY CLAN OFFICIAL SITE</p>
-        <a href="#about" class="button">ENTER SITE</a>
+
+        <div class="hero-sub">
+            FLASH PARTY CLAN
+        </div>
+
+        <div class="hero-buttons">
+
+            <a href="#members" class="btn btn-red">
+                MEMBERS
+            </a>
+
+            <a href="#results" class="btn">
+                MATCH RESULTS
+            </a>
+
+        </div>
+
     </div>
+
 </header>
 
-<section id="about">
-    <h2>ABOUT</h2>
 
-    <div class="card">
-        <h3>AK黙示録騎士</h3>
+<!-- ===== ABOUT ===== -->
+
+<section class="about" id="about">
+
+    <div class="container">
+
+        <div class="section-title">
+            <span class="en">WHO WE ARE</span>
+            <h2>ABOUT US</h2>
+        </div>
+
+        <div class="about-box">
+
+            <p>
+                AK黙示録騎士は、FLASH PARTYを中心に活動するゲームクラン。<br>
+                楽しく、そして本気で勝利を目指す。<br><br>
+                仲間と共に戦い、最高の瞬間を作る。
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ===== MEMBERS ===== -->
+
+<section class="members" id="members">
+
+    <div class="container">
+
+        <div class="section-title">
+            <span class="en">OUR PLAYERS</span>
+            <h2>MEMBERS</h2>
+        </div>
+
+        <div class="member-grid">
+
+            <div class="member">
+                <div class="member-icon">⚔️</div>
+                <div class="member-name">Oct.</div>
+                <div class="member-role">PLAYER</div>
+            </div>
+
+            <div class="member">
+                <div class="member-icon">🔥</div>
+                <div class="member-name">MEMBER 02</div>
+                <div class="member-role">PLAYER</div>
+            </div>
+
+            <div class="member">
+                <div class="member-icon">☠️</div>
+                <div class="member-name">MEMBER 03</div>
+                <div class="member-role">PLAYER</div>
+            </div>
+
+            <div class="member">
+                <div class="member-icon">⚡</div>
+                <div class="member-name">MEMBER 04</div>
+                <div class="member-role">PLAYER</div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ===== RESULTS ===== -->
+
+<section class="results" id="results">
+
+    <div class="container">
+
+        <div class="section-title">
+            <span class="en">BATTLE RECORD</span>
+            <h2>MATCH RESULTS</h2>
+        </div>
+
+        <div class="result">
+
+            <div class="result-info">
+                <span class="result-date">
+                    2026.08.26
+                </span>
+
+                <span class="result-opponent">
+                    VS UNKNOWN CLAN
+                </span>
+            </div>
+
+            <span class="win">
+                WIN
+            </span>
+
+            <span class="score">
+                3 - 1
+            </span>
+
+        </div>
+
+        <div class="result">
+
+            <div class="result-info">
+                <span class="result-date">
+                    2026.08.20
+                </span>
+
+                <span class="result-opponent">
+                    VS UNKNOWN CLAN
+                </span>
+            </div>
+
+            <span class="win">
+                WIN
+            </span>
+
+            <span class="score">
+                3 - 2
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ===== NEWS ===== -->
+
+<section id="news">
+
+    <div class="container">
+
+        <div class="section-title">
+            <span class="en">LATEST INFORMATION</span>
+            <h2>NEWS</h2>
+        </div>
+
+        <div class="news-card">
+
+            <div class="news-date">
+                2026.08.26
+            </div>
+
+            <div class="news-title">
+                AK黙示録騎士 OFFICIAL SITE OPEN
+            </div>
+
+        </div>
+
+        <div class="news-card">
+
+            <div class="news-date">
+                2026.08.26
+            </div>
+
+            <div class="news-title">
+                CLAN MEMBER RECRUITMENT
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ===== JOIN ===== -->
+
+<section class="join">
+
+    <div class="container">
+
+        <h2>JOIN AK</h2>
+
         <p>
-            FLASH PARTYを中心に活動するゲームクラン。<br>
-            楽しく、そして本気で勝利を目指します。
+            AK黙示録騎士と一緒に戦おう。
         </p>
+
+        <a
+            href="https://x.com/AKclan_FP"
+            target="_blank"
+            class="btn btn-red"
+        >
+            X / TWITTER
+        </a>
+
     </div>
+
 </section>
 
-<section>
-    <h2>MEMBERS</h2>
 
-    <div class="members">
-        <div class="member">
-            <span>⚔️</span>
-            Oct.
-        </div>
-
-        <div class="member">
-            <span>🔥</span>
-            Member 02
-        </div>
-
-        <div class="member">
-            <span>🌙</span>
-            Member 03
-        </div>
-
-        <div class="member">
-            <span>⚡</span>
-            Member 04
-        </div>
-    </div>
-</section>
-
-<section>
-    <h2>NEWS</h2>
-
-    <div class="card">
-        <h3>2026.08.26</h3>
-        <p>AK黙示録騎士 Official Site 開設。</p>
-    </div>
-
-    <div class="card">
-        <h3>CLAN MATCH</h3>
-        <p>次回対戦情報は後日公開予定。</p>
-    </div>
-</section>
-
-<section>
-    <h2>JOIN US</h2>
-
-    <div class="card">
-        <h3>入隊希望者募集中</h3>
-        <p>
-            一緒にFLASH PARTYを楽しみたい方を募集しています。
-        </p>
-        <br>
-        <a href="#" class="button">入隊について</a>
-    </div>
-</section>
+<!-- ===== FOOTER ===== -->
 
 <footer>
-    © 2026 AK黙示録騎士
+
+    © 2026 AK MOKUSHIROKU KISHI
+
 </footer>
 
 </body>
