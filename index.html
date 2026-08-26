@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AK黙示録騎士 | OFFICIAL</title>
+
+<style>
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{
+ background:#050505;
+ color:white;
+ font-family:Arial,"Noto Sans JP",sans-serif;
+}
+nav{
+ position:fixed;
+ top:0;
+ width:100%;
+ padding:18px 25px;
+ background:#000d;
+ border-bottom:1px solid #e60012;
+ z-index:10;
+ display:flex;
+ justify-content:space-between;
+}
+nav b{color:#e60012}
+nav a{color:white;text-decoration:none;margin-left:18px;font-size:12px}
+
+.hero{
+ min-height:100vh;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ text-align:center;
+ padding:80px 20px;
+ background:
+ radial-gradient(circle,#65000a,#050505 55%);
+}
+.hero h1{
+ font-size:clamp(38px,9vw,75px);
+ font-weight:900;
+}
+.hero h1 span{color:#e60012}
+.hero p{margin-top:20px;color:#ccc}
+.btn{
+ display:inline-block;
+ margin-top:30px;
+ padding:13px 30px;
+ border:1px solid #e60012;
+ color:white;
+ text-decoration:none;
+}
+section{padding:90px 20px}
+.container{max-width:1000px;margin:auto}
+.title{text-align:center;margin-bottom:40px}
+.title small{color:#e60012;letter-spacing:4px}
+.title h2{font-size:32px;margin-top:8px}
+
+.about{
+ background:#080808;
+}
+.about-box{
+ border-left:3px solid #e60012;
+ padding:25px;
+ background:#111;
+ line-height:2;
+}
+
+.members{
+ background:#050505;
+}
+.grid{
+ display:grid;
+ grid-template-columns:repeat(3,1fr);
+ gap:15px;
+}
+.member{
+ padding:25px;
+ min-height:130px;
+ background:#101010;
+ border:1px solid #292929;
+}
+.member:hover{border-color:#e60012}
+.number{
+ color:#e60012;
+ font-size:12px;
+}
+.name{
+ margin-top:12px;
+ font-size:22px;
+ font-weight:bold;
+}
+
+.rules{
+ background:#080808;
+}
+.rule{
+ padding:18px;
+ margin-bottom:12px;
+ background:#111;
+ border-left:3px solid #e60012;
+}
+
+footer{
+ padding:40px 20px;
+ text-align:center;
+ background:#000;
+ color:#777;
+}
+footer b{color:#e60012}
+
+@media(max-width:600px){
+ .grid{grid-template-columns:1fr}
+ nav{padding:15px}
+ nav a{margin-left:8px;font-size:10px}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+ <b>AK 黙示録騎士</b>
+ <div>
+  <a href="#about">ABOUT</a>
+  <a href="#members">MEMBERS</a>
+  <a href="#rules">RULES</a>
+ </div>
+</nav>
+
+<header class="hero">
+ <div>
+  <h1>AK<span>黙示録騎士</span></h1>
+  <p>FLASH PARTY CLAN OFFICIAL SITE</p>
+  <p>仲間と共に楽しみ、戦い、高め合うクラン。</p>
+  <a class="btn" href="#about">ENTER SITE</a>
+ </div>
+</header>
+
+<section id="about" class="about">
+ <div class="container">
+  <div class="title">
+   <small>WHO WE ARE</small>
+   <h2>ABOUT AK</h2>
+  </div>
+  <div class="about-box">
+   <p>仲間と共に楽しみ、戦い、高め合うクラン。</p>
+   <p>FLASH PARTYを中心に、クラン戦や大会などで活動しています。</p>
+  </div>
+ </div>
+</section>
+
+<section id="members" class="members">
+ <div class="container">
+  <div class="title">
+   <small>CLAN MEMBERS</small>
+   <h2>MEMBERS</h2>
+  </div>
+
+  <div class="grid">
+
+   <div class="member">
+    <div class="number">PLAYER 01</div>
+    <div class="name">AK Member</div>
+   </div>
+
+   <div class="member">
+    <div class="number">PLAYER 02</div>
+    <div class="name">AK Member</div>
+   </div>
+
+   <div class="member">
+    <div class="number">PLAYER 03</div>
+    <div class="name">AK Member</div>
+   </div>
+
+   <div class="member">
+    <div class="number">PLAYER 04</div>
+    <div class="name">Oct.</div>
+   </div>
+
+   <div class="member">
+    <div class="number">PLAYER 05</div>
+    <div class="name">AK Member</div>
+   </div>
+
+   <div class="member">
+    <div class="number">PLAYER 06</div>
+    <div class="name">Puppy</div>
+   </div>
+
+  </div>
+ </div>
+</section>
+
+<section id="rules" class="rules">
+ <div class="container">
+  <div class="title">
+   <small>CLAN POLICY</small>
+   <h2>RULES</h2>
+  </div>
+
+  <div class="rule">01　仲間を尊重し、楽しく活動すること。</div>
+  <div class="rule">02　クラン戦・大会では相手へのリスペクトを忘れないこと。</div>
+  <div class="rule">03　煽りやホールチャットでの相手が不快に思う発言などは禁止。</div>
+  <div class="rule">04　困ったことがあれば、メンバー同士で相談すること。</div>
+ </div>
+</section>
+
+<footer>
+ <b>AK</b> 黙示録騎士
+ <p>FLASH PARTY CLAN OFFICIAL SITE</p>
+ <p>© AK黙示録騎士</p>
+</footer>
+
+</body>
+</html>
