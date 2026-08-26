@@ -26,7 +26,9 @@ body {
     overflow-x: hidden;
 }
 
-/* ===== 共通 ===== */
+/* =========================
+   COMMON
+========================= */
 
 section {
     position: relative;
@@ -34,22 +36,22 @@ section {
 }
 
 .container {
-    width: min(1100px, 100%);
+    width: min(1000px, 100%);
     margin: auto;
 }
 
 .section-title {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 45px;
 }
 
 .section-title .en {
     display: block;
     font-family: "Orbitron", sans-serif;
-    font-size: 13px;
+    font-size: 12px;
     letter-spacing: 5px;
     color: #e60012;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 .section-title h2 {
@@ -60,40 +62,49 @@ section {
 .section-title h2::after {
     content: "";
     display: block;
-    width: 60px;
+    width: 55px;
     height: 3px;
     background: #e60012;
     margin: 15px auto 0;
-    box-shadow: 0 0 15px #e60012;
+    box-shadow: 0 0 15px rgba(230,0,18,.8);
 }
 
-/* ===== 背景 ===== */
+/* =========================
+   BACKGROUND
+========================= */
 
 body::before {
     content: "";
     position: fixed;
     inset: 0;
-    pointer-events: none;
     z-index: -1;
+    pointer-events: none;
 
     background:
         linear-gradient(
             115deg,
             transparent 0%,
-            rgba(230,0,18,.04) 45%,
+            rgba(230,0,18,.03) 45%,
             rgba(230,0,18,.12) 50%,
             transparent 55%
         );
 }
 
-/* ===== HERO ===== */
+/* =========================
+   HERO
+========================= */
 
 .hero {
     min-height: 100vh;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     text-align: center;
+
+    position: relative;
+    overflow: hidden;
 
     background:
         radial-gradient(
@@ -101,55 +112,70 @@ body::before {
             rgba(230,0,18,.25),
             transparent 40%
         ),
-        linear-gradient(#030303, #090909);
-
-    overflow: hidden;
+        linear-gradient(
+            #020202,
+            #090909
+        );
 }
 
 .hero::before {
     content: "";
+
     position: absolute;
-    width: 700px;
-    height: 700px;
+
+    width: 650px;
+    height: 650px;
+
     border: 1px solid rgba(230,0,18,.15);
     border-radius: 50%;
-    animation: rotate 20s linear infinite;
+
+    animation: rotate 25s linear infinite;
 }
 
 .hero::after {
     content: "";
+
     position: absolute;
+
     width: 450px;
     height: 450px;
-    border: 1px solid rgba(255,255,255,.05);
+
+    border: 1px solid rgba(255,255,255,.04);
+
     transform: rotate(45deg);
 }
 
 .hero-content {
     position: relative;
     z-index: 2;
+
+    width: 100%;
     padding: 30px;
 }
 
 .logo {
-    width: min(300px, 75vw);
-    max-height: 300px;
+    width: min(280px, 70vw);
+    max-height: 280px;
+
     object-fit: contain;
 
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 
     filter:
-        drop-shadow(0 0 10px rgba(230,0,18,.5))
-        drop-shadow(0 0 35px rgba(230,0,18,.3));
+        drop-shadow(0 0 12px rgba(230,0,18,.6))
+        drop-shadow(0 0 35px rgba(230,0,18,.35));
 
     animation: logoFloat 4s ease-in-out infinite;
 }
 
 .hero h1 {
     font-family: "Orbitron", sans-serif;
-    font-size: clamp(30px, 8vw, 65px);
+
+    font-size: clamp(32px, 8vw, 64px);
+
     font-weight: 900;
-    letter-spacing: 4px;
+
+    letter-spacing: 3px;
 
     text-shadow:
         0 0 10px rgba(230,0,18,.8),
@@ -158,37 +184,53 @@ body::before {
 
 .hero-sub {
     margin-top: 12px;
-    color: #aaa;
+
+    color: #999;
+
     font-family: "Orbitron", sans-serif;
-    font-size: 13px;
+
+    font-size: 12px;
+
     letter-spacing: 5px;
 }
 
 .hero-buttons {
     margin-top: 35px;
+
     display: flex;
     justify-content: center;
+
     gap: 15px;
+
     flex-wrap: wrap;
 }
 
 .btn {
     display: inline-block;
+
     padding: 14px 30px;
+
     color: white;
+
     text-decoration: none;
+
     font-weight: 900;
+
     letter-spacing: 1px;
 
     border: 1px solid #e60012;
-    background: rgba(230,0,18,.1);
+
+    background: rgba(230,0,18,.08);
 
     transition: .3s;
 }
 
 .btn:hover {
     background: #e60012;
-    box-shadow: 0 0 25px rgba(230,0,18,.7);
+
+    box-shadow:
+        0 0 25px rgba(230,0,18,.7);
+
     transform: translateY(-3px);
 }
 
@@ -196,7 +238,9 @@ body::before {
     background: #e60012;
 }
 
-/* ===== ABOUT ===== */
+/* =========================
+   ABOUT
+========================= */
 
 .about {
     background: #090909;
@@ -204,14 +248,17 @@ body::before {
 
 .about-box {
     max-width: 800px;
+
     margin: auto;
+
     padding: 35px;
 
-    background: linear-gradient(
-        135deg,
-        #111,
-        #080808
-    );
+    background:
+        linear-gradient(
+            135deg,
+            #121212,
+            #080808
+        );
 
     border-left: 3px solid #e60012;
 
@@ -221,17 +268,94 @@ body::before {
 
 .about-box p {
     color: #bbb;
+
     line-height: 2;
+
     text-align: center;
 }
 
-/* ===== MEMBERS ===== */
+/* =========================
+   MEMBERS
+========================= */
 
+.members {
+    background: #050505;
+}
 
-<div class="member-name">ミミズク</div>
-<div class="member-name">ステック</div>
-    <div class="member-name">Oct.</div>
-/* ===== RESULTS ===== */
+.member-list {
+    max-width: 700px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 12px;
+}
+
+.member {
+    position: relative;
+
+    padding: 20px 25px;
+
+    background: #101010;
+
+    border: 1px solid #252525;
+
+    overflow: hidden;
+
+    transition: .3s;
+}
+
+.member::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 3px;
+    height: 100%;
+
+    background: #e60012;
+
+    box-shadow:
+        0 0 15px rgba(230,0,18,.7);
+}
+
+.member:hover {
+    border-color: #e60012;
+
+    transform: translateX(5px);
+
+    box-shadow:
+        0 0 20px rgba(230,0,18,.15);
+}
+
+.member-number {
+    display: inline-block;
+
+    width: 35px;
+
+    color: #e60012;
+
+    font-family: "Orbitron", sans-serif;
+
+    font-size: 12px;
+}
+
+.member-name {
+    font-size: 18px;
+
+    font-weight: 900;
+}
+
+/* =========================
+   RESULTS
+========================= */
 
 .results {
     background: #090909;
@@ -239,50 +363,79 @@ body::before {
 
 .result {
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
 
+    gap: 15px;
+
     padding: 22px;
+
     margin-bottom: 12px;
 
     background: #111;
+
     border: 1px solid #222;
 }
 
 .result-info {
     display: flex;
+
     flex-direction: column;
+
+    min-width: 0;
 }
 
 .result-date {
     color: #666;
+
     font-size: 11px;
+
+    font-family: "Orbitron", sans-serif;
 }
 
 .result-opponent {
     font-weight: 900;
+
     margin-top: 5px;
 }
 
 .win {
     color: #e60012;
+
     font-family: "Orbitron", sans-serif;
+
+    font-size: 12px;
+
     font-weight: 900;
 }
 
 .score {
     font-family: "Orbitron", sans-serif;
+
     font-size: 22px;
+
     font-weight: 900;
+
+    white-space: nowrap;
 }
 
-/* ===== NEWS ===== */
+/* =========================
+   NEWS
+========================= */
+
+.news {
+    background: #050505;
+}
 
 .news-card {
     padding: 25px;
+
     margin-bottom: 15px;
 
     background: #101010;
+
     border: 1px solid #222;
 
     transition: .3s;
@@ -294,17 +447,25 @@ body::before {
 
 .news-date {
     color: #e60012;
+
     font-family: "Orbitron", sans-serif;
+
     font-size: 11px;
+
+    letter-spacing: 1px;
 }
 
 .news-title {
     margin-top: 8px;
+
     font-size: 18px;
+
     font-weight: 900;
 }
 
-/* ===== JOIN ===== */
+/* =========================
+   JOIN
+========================= */
 
 .join {
     text-align: center;
@@ -313,38 +474,49 @@ body::before {
         radial-gradient(
             circle at center,
             rgba(230,0,18,.2),
-            transparent 50%
+            transparent 55%
         ),
         #050505;
 }
 
 .join h2 {
     font-family: "Orbitron", sans-serif;
+
     font-size: 35px;
 }
 
 .join p {
     color: #aaa;
+
     margin: 20px 0 30px;
 }
 
-/* ===== FOOTER ===== */
+/* =========================
+   FOOTER
+========================= */
 
 footer {
     padding: 35px 20px;
+
     text-align: center;
 
     border-top: 1px solid #222;
 
     color: #555;
+
     font-family: "Orbitron", sans-serif;
+
     font-size: 10px;
+
     letter-spacing: 2px;
 }
 
-/* ===== ANIMATION ===== */
+/* =========================
+   ANIMATION
+========================= */
 
 @keyframes rotate {
+
     from {
         transform: rotate(0deg);
     }
@@ -352,9 +524,11 @@ footer {
     to {
         transform: rotate(360deg);
     }
+
 }
 
 @keyframes logoFloat {
+
     0%, 100% {
         transform: translateY(0);
     }
@@ -362,9 +536,12 @@ footer {
     50% {
         transform: translateY(-8px);
     }
+
 }
 
-/* ===== MOBILE ===== */
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 600px) {
 
@@ -373,11 +550,15 @@ footer {
     }
 
     .hero h1 {
-        letter-spacing: 2px;
+        letter-spacing: 1px;
     }
 
     .hero-sub {
         letter-spacing: 3px;
+    }
+
+    .member-list {
+        grid-template-columns: 1fr;
     }
 
     .result {
@@ -391,13 +572,17 @@ footer {
     .about-box {
         padding: 25px 20px;
     }
+
 }
 </style>
 </head>
 
+
 <body>
 
-<!-- ===== HERO ===== -->
+<!-- =========================
+     HERO
+========================= -->
 
 <header class="hero">
 
@@ -405,11 +590,13 @@ footer {
 
         <img
             src="sfUqRIPD.jpg"
-            alt="AK黙示録騎士 ロゴ"
+            alt="AK黙示録騎士"
             class="logo"
         >
 
-        <h1>AK黙示録騎士</h1>
+        <h1>
+            AK黙示録騎士
+        </h1>
 
         <div class="hero-sub">
             FLASH PARTY CLAN
@@ -417,12 +604,18 @@ footer {
 
         <div class="hero-buttons">
 
-            <a href="#members" class="btn btn-red">
+            <a
+                href="#members"
+                class="btn btn-red"
+            >
                 MEMBERS
             </a>
 
-            <a href="#results" class="btn">
-                MATCH RESULTS
+            <a
+                href="#results"
+                class="btn"
+            >
+                RESULTS
             </a>
 
         </div>
@@ -432,23 +625,34 @@ footer {
 </header>
 
 
-<!-- ===== ABOUT ===== -->
+<!-- =========================
+     ABOUT
+========================= -->
 
 <section class="about" id="about">
 
     <div class="container">
 
         <div class="section-title">
-            <span class="en">WHO WE ARE</span>
-            <h2>ABOUT US</h2>
+
+            <span class="en">
+                WHO WE ARE
+            </span>
+
+            <h2>
+                ABOUT US
+            </h2>
+
         </div>
 
         <div class="about-box">
 
             <p>
-                AK黙示録騎士は、FLASH PARTYを中心に活動するゲームクラン。<br>
-                楽しく、そして本気で勝利を目指す。<br><br>
-                仲間と共に戦い、最高の瞬間を作る。
+                AK黙示録騎士は、<br>
+                FLASH PARTYを中心に活動するゲームクラン。<br><br>
+
+                仲間と共に戦い、<br>
+                勝利を目指す。
             </p>
 
         </div>
@@ -458,41 +662,69 @@ footer {
 </section>
 
 
-<!-- ===== MEMBERS ===== -->
+<!-- =========================
+     MEMBERS
+========================= -->
 
 <section class="members" id="members">
 
     <div class="container">
 
         <div class="section-title">
-            <span class="en">OUR PLAYERS</span>
-            <h2>MEMBERS</h2>
+
+            <span class="en">
+                OUR PLAYERS
+            </span>
+
+            <h2>
+                MEMBERS
+            </h2>
+
         </div>
 
-        <div class="member-grid">
+        <div class="member-list">
 
             <div class="member">
-                <div class="member-icon">⚔️</div>
-                <div class="member-name">Oct.</div>
-                <div class="member-role">PLAYER</div>
+                <span class="member-number">
+                    01
+                </span>
+
+                <span class="member-name">
+                    ミミズク
+                </span>
             </div>
 
-            <div class="member">
-                <div class="member-icon">🔥</div>
-                <div class="member-name">MEMBER 02</div>
-                <div class="member-role">PLAYER</div>
-            </div>
 
             <div class="member">
-                <div class="member-icon">☠️</div>
-                <div class="member-name">MEMBER 03</div>
-                <div class="member-role">PLAYER</div>
+                <span class="member-number">
+                    02
+                </span>
+
+                <span class="member-name">
+                    はゆ
+                </span>
             </div>
 
+
             <div class="member">
-                <div class="member-icon">⚡</div>
-                <div class="member-name">MEMBER 04</div>
-                <div class="member-role">PLAYER</div>
+                <span class="member-number">
+                    03
+                </span>
+
+                <span class="member-name">
+                    ステック
+                </span>
+            </div>
+
+
+            <div class="member">
+                <span class="member-number">
+                    Oct.
+                </span>
+
+                <span class="member-name">
+                    
+                </span>
             </div>
 
         </div>
@@ -502,27 +734,39 @@ footer {
 </section>
 
 
-<!-- ===== RESULTS ===== -->
+<!-- =========================
+     RESULTS
+========================= -->
 
 <section class="results" id="results">
 
     <div class="container">
 
         <div class="section-title">
-            <span class="en">BATTLE RECORD</span>
-            <h2>MATCH RESULTS</h2>
+
+            <span class="en">
+               CLAN BATTLE RECORD
+            </span>
+
+            <h2>
+                MATCH RESULTS
+            </h2>
+
         </div>
+
 
         <div class="result">
 
             <div class="result-info">
+
                 <span class="result-date">
-                    2026.08.26
+                    2026.08.22
                 </span>
 
                 <span class="result-opponent">
-                    VS UNKNOWN CLAN
+                    VS でかすぎ CLAN
                 </span>
+
             </div>
 
             <span class="win">
@@ -530,21 +774,24 @@ footer {
             </span>
 
             <span class="score">
-                3 - 1
+             10 - 0
             </span>
 
         </div>
 
+
         <div class="result">
 
             <div class="result-info">
+
                 <span class="result-date">
-                    2026.08.20
+                    2026.07.26
                 </span>
 
                 <span class="result-opponent">
-                    VS UNKNOWN CLAN
+                    VS OTL CLAN
                 </span>
+
             </div>
 
             <span class="win">
@@ -552,7 +799,7 @@ footer {
             </span>
 
             <span class="score">
-                3 - 2
+                3 - 0
             </span>
 
         </div>
@@ -562,16 +809,26 @@ footer {
 </section>
 
 
-<!-- ===== NEWS ===== -->
+<!-- =========================
+     NEWS
+========================= -->
 
-<section id="news">
+<section class="news" id="news">
 
     <div class="container">
 
         <div class="section-title">
-            <span class="en">LATEST INFORMATION</span>
-            <h2>NEWS</h2>
+
+            <span class="en">
+                LATEST INFORMATION
+            </span>
+
+            <h2>
+                NEWS
+            </h2>
+
         </div>
+
 
         <div class="news-card">
 
@@ -584,6 +841,7 @@ footer {
             </div>
 
         </div>
+
 
         <div class="news-card">
 
@@ -602,13 +860,17 @@ footer {
 </section>
 
 
-<!-- ===== JOIN ===== -->
+<!-- =========================
+     JOIN
+========================= -->
 
 <section class="join">
 
     <div class="container">
 
-        <h2>JOIN AK</h2>
+        <h2>
+            JOIN AK
+        </h2>
 
         <p>
             AK黙示録騎士と一緒に戦おう。
@@ -627,7 +889,9 @@ footer {
 </section>
 
 
-<!-- ===== FOOTER ===== -->
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
