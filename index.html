@@ -1,0 +1,1664 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>AK黙示録騎士 | OFFICIAL</title>
+
+<meta
+    name="description"
+    content="AK黙示録騎士 - FLASH PARTY CLAN OFFICIAL SITE"
+>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+    rel="stylesheet"
+>
+
+<style>
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background:
+        radial-gradient(
+            circle at top,
+            #260000 0%,
+            #0b0000 35%,
+            #030303 75%
+        );
+
+    color: #ffffff;
+
+    font-family: "Noto Sans JP", sans-serif;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   COMMON
+========================= */
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+section {
+    position: relative;
+}
+
+.container {
+    width: min(1100px, 90%);
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.section-title .en {
+    display: block;
+
+    color: #ff2020;
+
+    font-family: "Orbitron", sans-serif;
+
+    font-size: 14px;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 10px;
+}
+
+.section-title h2 {
+    font-size: clamp(28px, 5vw, 46px);
+
+    font-weight: 900;
+
+    letter-spacing: 3px;
+}
+
+.section-title h2::after {
+    content: "";
+
+    display: block;
+
+    width: 70px;
+    height: 3px;
+
+    background: #ff1717;
+
+    margin: 18px auto 0;
+
+    box-shadow: 0 0 15px #ff1717;
+}
+/* =========================
+   HEADER
+========================= */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 75px;
+
+    z-index: 1000;
+
+    background: rgba(0, 0, 0, 0.78);
+
+    border-bottom:
+        1px solid
+        rgba(255, 20, 20, 0.35);
+
+    backdrop-filter: blur(10px);
+}
+
+.nav {
+    width: min(1200px, 92%);
+    height: 100%;
+
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: "Orbitron", sans-serif;
+
+    font-weight: 900;
+
+    font-size: 20px;
+
+    letter-spacing: 2px;
+
+    color: #ffffff;
+}
+
+.logo span {
+    color: #ff1616;
+}
+
+.nav-links {
+    display: flex;
+
+    gap: 28px;
+
+    list-style: none;
+}
+
+.nav-links a {
+    position: relative;
+
+    font-family: "Orbitron", sans-serif;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+.nav-links a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -7px;
+
+    width: 0;
+    height: 2px;
+
+    background: #ff1717;
+
+    box-shadow:
+        0 0 8px #ff1717;
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ff2727;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 100vh;
+
+    padding:
+        150px 20px 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.75)
+        ),
+        radial-gradient(
+            circle at center,
+            rgba(180, 0, 0, 0.35),
+            transparent 55%
+        );
+
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 650px;
+    height: 650px;
+
+    border:
+        1px solid
+        rgba(255, 20, 20, 0.12);
+
+    border-radius: 50%;
+
+    animation:
+        rotateCircle
+        25s linear infinite;
+}
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 450px;
+    height: 450px;
+
+    border:
+        1px solid
+        rgba(255, 20, 20, 0.1);
+
+    border-radius: 50%;
+
+    animation:
+        rotateCircleReverse
+        18s linear infinite;
+}
+
+.hero-content {
+    position: relative;
+
+    z-index: 2;
+}
+
+.hero-small {
+    font-family: "Orbitron", sans-serif;
+
+    font-size: 13px;
+
+    letter-spacing: 7px;
+
+    color: #ff2929;
+
+    margin-bottom: 20px;
+
+    animation:
+        fadeUp
+        1s ease forwards;
+}
+
+.hero h1 {
+    font-family: "Noto Sans JP", sans-serif;
+
+    font-size:
+        clamp(42px, 10vw, 90px);
+
+    font-weight: 900;
+
+    letter-spacing: 5px;
+
+    line-height: 1.1;
+
+    text-shadow:
+        0 0 10px
+        rgba(255, 0, 0, 0.3),
+
+        0 0 35px
+        rgba(255, 0, 0, 0.15);
+
+    animation:
+        fadeUp
+        1s 0.15s ease both;
+}
+
+.hero h1 span {
+    color: #ff1717;
+}
+
+.hero-official {
+    margin-top: 18px;
+
+    font-family: "Orbitron", sans-serif;
+
+    font-size:
+        clamp(15px, 3vw, 24px);
+
+    font-weight: 700;
+
+    letter-spacing: 10px;
+
+    color: #ffffff;
+
+    animation:
+        fadeUp
+        1s 0.3s ease both;
+}
+
+.hero-description {
+    margin-top: 30px;
+
+    color: #cccccc;
+
+    font-size: 15px;
+
+    line-height: 2;
+
+    animation:
+        fadeUp
+        1s 0.45s ease both;
+}
+
+.hero-button {
+    display: inline-block;
+
+    margin-top: 38px;
+
+    padding:
+        14px 35px;
+
+    border:
+        1px solid #ff2020;
+
+    background:
+        rgba(120, 0, 0, 0.2);
+
+    font-family: "Orbitron", sans-serif;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    transition: 0.35s;
+
+    animation:
+        fadeUp
+        1s 0.6s ease both;
+}
+
+.hero-button:hover {
+    background: #ff1717;
+
+    box-shadow:
+        0 0 15px
+        rgba(255, 0, 0, 0.5),
+
+        0 0 40px
+        rgba(255, 0, 0, 0.25);
+
+    transform:
+        translateY(-3px);
+}
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    padding: 110px 0;
+}
+
+.about-box {
+    position: relative;
+
+    padding: 50px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(100, 0, 0, 0.25),
+            rgba(0, 0, 0, 0.65)
+        );
+
+    border:
+        1px solid
+        rgba(255, 30, 30, 0.25);
+
+    box-shadow:
+        0 0 40px
+        rgba(100, 0, 0, 0.12);
+
+    overflow: hidden;
+}
+
+.about-box::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 4px;
+    height: 100%;
+
+    background: #ff1717;
+
+    box-shadow:
+        0 0 15px #ff1717;
+}
+
+.about-box h3 {
+    color: #ff2929;
+
+    font-size: 22px;
+
+    margin-bottom: 20px;
+}
+
+.about-box p {
+    color: #dddddd;
+
+    line-height: 2.2;
+
+    font-size: 15px;
+}
+/* =========================
+   MEMBERS
+========================= */
+
+.members {
+    padding: 110px 0;
+
+    background:
+        rgba(20, 0, 0, 0.25);
+}
+
+.member-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.member-card {
+    position: relative;
+
+    padding: 35px 25px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(70, 0, 0, 0.4),
+            rgba(5, 5, 5, 0.9)
+        );
+
+    border:
+        1px solid
+        rgba(255, 30, 30, 0.22);
+
+    transition: 0.4s;
+
+    overflow: hidden;
+}
+
+.member-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -100%;
+
+    width: 100%;
+    height: 2px;
+
+    background: #ff1717;
+
+    box-shadow:
+        0 0 12px #ff1717;
+
+    transition: 0.5s;
+}
+
+.member-card:hover {
+    transform:
+        translateY(-8px);
+
+    border-color:
+        rgba(255, 30, 30, 0.65);
+
+    box-shadow:
+        0 15px 40px
+        rgba(80, 0, 0, 0.35);
+}
+
+.member-card:hover::before {
+    left: 100%;
+}
+
+.member-number {
+    font-family:
+        "Orbitron",
+        sans-serif;
+
+    font-size: 12px;
+
+    color: #ff2222;
+
+    letter-spacing: 3px;
+}
+
+.member-name {
+    margin-top: 15px;
+
+    font-size: 25px;
+
+    font-weight: 900;
+}
+
+.member-role {
+    margin-top: 8px;
+
+    font-family:
+        "Orbitron",
+        sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    color: #999999;
+}
+/* =========================
+   RULE
+========================= */
+
+.rules {
+    padding: 110px 0;
+}
+
+.rule-list {
+    display: grid;
+    gap: 15px;
+}
+
+.rule-item {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+
+    padding: 22px 25px;
+
+    background:
+        rgba(30, 0, 0, 0.4);
+
+    border-left:
+        3px solid #ff1717;
+
+    transition: 0.3s;
+}
+
+.rule-item:hover {
+    background:
+        rgba(90, 0, 0, 0.3);
+
+    transform:
+        translateX(5px);
+}
+
+.rule-number {
+    flex-shrink: 0;
+
+    font-family:
+        "Orbitron",
+        sans-serif;
+
+    font-size: 13px;
+
+    color: #ff1717;
+}
+
+.rule-item p {
+    color: #dddddd;
+
+    line-height: 1.8;
+}
+
+
+/* =========================
+   RECRUIT
+========================= */
+
+.recruit {
+    padding: 120px 0;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.75),
+            rgba(35, 0, 0, 0.8)
+        );
+}
+
+.recruit h2 {
+    font-size:
+        clamp(30px, 6vw, 55px);
+
+    font-weight: 900;
+}
+
+.recruit h2 span {
+    color: #ff1717;
+}
+
+.recruit p {
+    margin-top: 20px;
+
+    color: #cccccc;
+
+    line-height: 2;
+}
+
+.recruit-button {
+    display: inline-block;
+
+    margin-top: 35px;
+
+    padding: 16px 45px;
+
+    background: #ff1717;
+
+    border:
+        1px solid #ff1717;
+
+    font-family:
+        "Orbitron",
+        sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    box-shadow:
+        0 0 20px
+        rgba(255, 0, 0, 0.25);
+
+    transition: 0.35s;
+}
+
+.recruit-button:hover {
+    background: transparent;
+
+    box-shadow:
+        0 0 30px
+        rgba(255, 0, 0, 0.35);
+
+    transform:
+        translateY(-3px);
+}
+
+
+/* =========================
+   SOCIAL
+========================= */
+
+.social {
+    padding: 100px 0;
+
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+}
+
+.social-link {
+    min-width: 180px;
+
+    padding: 18px 25px;
+
+    border:
+        1px solid
+        rgba(255, 30, 30, 0.35);
+
+    background:
+        rgba(40, 0, 0, 0.35);
+
+    font-family:
+        "Orbitron",
+        sans-serif;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    transition: 0.35s;
+}
+
+.social-link:hover {
+    background: #ff1717;
+
+    border-color: #ff1717;
+
+    box-shadow:
+        0 0 25px
+        rgba(255, 0, 0, 0.3);
+
+    transform:
+        translateY(-4px);
+}
+</style>
+
+</head>
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+    <nav class="nav">
+
+        <a href="#top" class="logo">
+            AK<span>黙示録騎士</span>
+        </a>
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="#about">ABOUT</a>
+            </li>
+
+            <li>
+                <a href="#members">MEMBERS</a>
+            </li>
+
+            <li>
+                <a href="#rules">RULE</a>
+            </li>
+
+            <li>
+                <a href="#recruit">RECRUIT</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<main id="top">
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <p class="hero-small">
+            FLASH PARTY CLAN
+        </p>
+
+        <h1>
+            AK<span>黙示録騎士</span>
+        </h1>
+
+        <p class="hero-official">
+            OFFICIAL
+        </p>
+
+        <p class="hero-description">
+            仲間と共に楽しみ、戦い、高め合うクラン。
+        </p>
+
+        <a
+            href="#about"
+            class="hero-button"
+        >
+            EXPLORE AK
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section
+    class="about"
+    id="about"
+>
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span class="en">
+                ABOUT US
+            </span>
+
+            <h2>
+                AK黙示録騎士
+            </h2>
+
+        </div>
+
+        <div class="about-box">
+
+            <h3>
+                仲間と共に、さらに高みへ。
+            </h3>
+
+            <p>
+                AK黙示録騎士は、
+                フラッシュパーティを中心に活動するクランです。
+                <br>
+                仲間と共に楽しみながら戦い、
+                お互いに高め合うことを大切にしています。
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- =========================
+     MEMBERS
+========================= -->
+
+<section
+    class="members"
+    id="members"
+>
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span class="en">
+                MEMBERS
+            </span>
+
+            <h2>
+                MEMBER
+            </h2>
+
+        </div>
+
+
+        <div class="member-grid">
+
+
+            <!-- MEMBER 01 -->
+
+            <div class="member-card">
+
+                <div class="member-number">
+                    MEMBER 01
+                </div>
+
+                <div class="member-name">
+                    ミミズク
+                </div>
+
+                <div class="member-role">
+                    PLAYER
+                </div>
+
+            </div>
+
+
+            <!-- MEMBER 02 -->
+
+            <div class="member-card">
+
+                <div class="member-number">
+                    MEMBER 02
+                </div>
+
+                <div class="member-name">
+                    Oct.
+                </div>
+
+                <div class="member-role">
+                    PLAYER
+                </div>
+
+            </div>
+
+
+            <!-- MEMBER 03 -->
+
+            <div class="member-card">
+
+                <div class="member-number">
+                    MEMBER 03
+                </div>
+
+                <div class="member-name">
+                    Puppy
+                </div>
+
+                <div class="member-role">
+                    PLAYER
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+<!-- =========================
+     RULE
+========================= -->
+
+<section
+    class="rules"
+    id="rules"
+>
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span class="en">
+                CLAN RULE
+            </span>
+
+            <h2>
+                RULE
+            </h2>
+
+        </div>
+
+
+        <div class="rule-list">
+
+
+            <div class="rule-item">
+
+                <span class="rule-number">
+                    01
+                </span>
+
+                <p>
+                    メンバー同士で相談すること。
+                </p>
+
+            </div>
+
+
+            <div class="rule-item">
+
+                <span class="rule-number">
+                    02
+                </span>
+
+                <p>
+                    煽りやホールチャットでの、
+                    相手が不快に思う発言などは禁止。
+                </p>
+
+            </div>
+
+
+            <div class="rule-item">
+
+                <span class="rule-number">
+                    03
+                </span>
+
+                <p>
+                    クラン内ではお互いを尊重し、
+                    楽しく活動すること。
+                </p>
+
+            </div>
+
+
+            <div class="rule-item">
+
+                <span class="rule-number">
+                    04
+                </span>
+
+                <p>
+                    クラン戦や大会などでは、
+                    相手への礼儀を忘れないこと。
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+<!-- =========================
+     RECRUIT
+========================= -->
+
+<section
+    class="recruit"
+    id="recruit"
+>
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span class="en">
+                JOIN US
+            </span>
+
+            <h2>
+                <span>RECRUIT</span>
+            </h2>
+
+        </div>
+
+        <p>
+            AK黙示録騎士では、
+            一緒に楽しく活動できるメンバーを募集しています。
+            <br>
+            強さだけではなく、
+            仲間と楽しくプレイすることを大切にしています。
+        </p>
+
+        <a
+            href="#social"
+            class="recruit-button"
+        >
+            JOIN AK
+        </a>
+
+    </div>
+
+</section>
+<!-- =========================
+     SOCIAL
+========================= -->
+
+<section
+    class="social"
+    id="social"
+>
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span class="en">
+                OFFICIAL SNS
+            </span>
+
+            <h2>
+                FOLLOW US
+            </h2>
+
+        </div>
+
+
+        <div class="social-links">
+
+
+            <!-- X -->
+
+            <a
+                href="https://x.com/AKclan_FP"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-link"
+            >
+                X / TWITTER
+            </a>
+
+
+            <!-- TikTok -->
+
+            <a
+                href="https://www.tiktok.com/@ak16735?_r=1&_t=ZS-99CvVNqpGBY"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-link"
+            >
+                TIKTOK
+            </a>
+
+
+        </div>
+
+    </div>
+
+</section>
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="footer-line"></div>
+
+    <div class="footer-content">
+
+        <p class="footer-logo">
+            AK<span>黙示録騎士</span>
+        </p>
+
+        <p class="footer-official">
+            FLASH PARTY CLAN OFFICIAL
+        </p>
+
+        <p class="copyright">
+            © 2026 AK黙示録騎士. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+<style>
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    position: relative;
+
+    padding: 70px 20px 35px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #090000,
+            #020202
+        );
+
+    border-top:
+        1px solid
+        rgba(255, 25, 25, 0.3);
+
+    text-align: center;
+
+    overflow: hidden;
+}
+
+.footer-line {
+    position: absolute;
+
+    top: 0;
+    left: 50%;
+
+    width: 180px;
+    height: 2px;
+
+    transform: translateX(-50%);
+
+    background: #ff1717;
+
+    box-shadow:
+        0 0 10px #ff1717,
+        0 0 25px rgba(255, 0, 0, 0.6);
+
+    animation:
+        footerLine 3s ease-in-out infinite;
+}
+
+.footer-content {
+    position: relative;
+
+    z-index: 2;
+}
+
+.footer-logo {
+    font-family:
+        "Orbitron",
+        sans-serif;
+
+    font-size: 24px;
+
+    font-weight: 900;
+
+    letter-spacing: 3px;
+}
+
+.footer-logo span {
+    color: #ff1717;
+}
+
+.footer-official {
+    margin-top: 12px;
+
+    font-family:
+        "Orbitron",
+        sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    color: #888888;
+}
+
+.copyright {
+    margin-top: 30px;
+
+    color: #555555;
+
+    font-family:
+        "Orbitron",
+        sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================
+   FOOTER LIGHT
+========================= */
+
+footer::before {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: -180px;
+
+    width: 450px;
+    height: 450px;
+
+    transform: translateX(-50%);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(180, 0, 0, 0.2),
+            transparent 65%
+        );
+
+    animation:
+        footerGlow 5s ease-in-out infinite;
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes footerLine {
+
+    0% {
+        width: 100px;
+        opacity: 0.5;
+    }
+
+    50% {
+        width: 280px;
+        opacity: 1;
+    }
+
+    100% {
+        width: 100px;
+        opacity: 0.5;
+    }
+
+}
+
+@keyframes footerGlow {
+
+    0% {
+        opacity: 0.3;
+        transform:
+            translateX(-50%)
+            scale(0.9);
+    }
+
+    50% {
+        opacity: 0.8;
+        transform:
+            translateX(-50%)
+            scale(1.05);
+    }
+
+    100% {
+        opacity: 0.3;
+        transform:
+            translateX(-50%)
+            scale(0.9);
+    }
+
+}
+
+
+/* =========================
+   BASIC ANIMATIONS
+========================= */
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform:
+            translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            translateY(0);
+    }
+
+}
+
+@keyframes rotateCircle {
+
+    from {
+        transform:
+            rotate(0deg);
+    }
+
+    to {
+        transform:
+            rotate(360deg);
+    }
+
+}
+
+@keyframes rotateCircleReverse {
+
+    from {
+        transform:
+            rotate(360deg);
+    }
+
+    to {
+        transform:
+            rotate(0deg);
+    }
+
+}
+
+</style>
+<style>
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    /* HEADER */
+
+    header {
+        height: 65px;
+    }
+
+    .nav {
+        width: 92%;
+    }
+
+    .logo {
+        font-size: 15px;
+        letter-spacing: 1px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 9px;
+        letter-spacing: 0;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: 100svh;
+        padding:
+            120px 20px 80px;
+    }
+
+    .hero::before {
+        width: 400px;
+        height: 400px;
+    }
+
+    .hero::after {
+        width: 280px;
+        height: 280px;
+    }
+
+    .hero-small {
+        font-size: 9px;
+        letter-spacing: 4px;
+    }
+
+    .hero h1 {
+        font-size:
+            clamp(38px, 12vw, 60px);
+
+        letter-spacing: 2px;
+    }
+
+    .hero-official {
+        font-size: 14px;
+        letter-spacing: 6px;
+    }
+
+    .hero-description {
+        font-size: 13px;
+        line-height: 2;
+    }
+
+    .hero-button {
+        padding:
+            13px 28px;
+    }
+
+
+    /* SECTION */
+
+    .about,
+    .members,
+    .rules,
+    .social {
+        padding: 80px 0;
+    }
+
+    .section-title {
+        margin-bottom: 35px;
+    }
+
+    .section-title .en {
+        font-size: 10px;
+        letter-spacing: 4px;
+    }
+
+    .section-title h2 {
+        font-size: 30px;
+        letter-spacing: 2px;
+    }
+
+
+    /* ABOUT */
+
+    .about-box {
+        padding: 30px 25px;
+    }
+
+    .about-box h3 {
+        font-size: 19px;
+    }
+
+    .about-box p {
+        font-size: 13px;
+        line-height: 2;
+    }
+
+
+    /* MEMBERS */
+
+    .member-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .member-card {
+        padding: 28px 20px;
+    }
+
+    .member-name {
+        font-size: 22px;
+    }
+
+
+    /* RULE */
+
+    .rule-item {
+        gap: 12px;
+        padding: 18px;
+    }
+
+    .rule-number {
+        font-size: 11px;
+    }
+
+    .rule-item p {
+        font-size: 13px;
+        line-height: 1.8;
+    }
+
+
+    /* RECRUIT */
+
+    .recruit {
+        padding: 85px 0;
+    }
+
+    .recruit h2 {
+        font-size: 34px;
+    }
+
+    .recruit p {
+        font-size: 13px;
+    }
+
+    .recruit-button {
+        padding:
+            14px 35px;
+    }
+
+
+    /* SOCIAL */
+
+    .social-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-link {
+        width: min(280px, 90%);
+        min-width: 0;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        padding:
+            55px 20px 30px;
+    }
+
+    .footer-logo {
+        font-size: 19px;
+    }
+
+    .footer-official {
+        font-size: 8px;
+        letter-spacing: 3px;
+    }
+
+    .copyright {
+        font-size: 8px;
+    }
+
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 400px) {
+
+    .nav-links {
+        gap: 8px;
+    }
+
+    .nav-links a {
+        font-size: 8px;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .hero-official {
+        font-size: 12px;
+    }
+
+}
+
+
+/* =========================
+   END
+========================= */
+
+</style>
+
+</body>
+
+</html>
