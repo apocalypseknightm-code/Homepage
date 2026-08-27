@@ -822,11 +822,17 @@ header {
 
 <section class="hero">
 
-    <div class="hero-content">
+<div class="hero-content">
 
-        <p class="hero-small">
-            FLASH PARTY CLAN
-        </p>
+    <img
+        src="ak-logo.png"
+        alt="AK黙示録騎士"
+        class="ak-logo"
+    >
+
+    <p class="hero-small">
+        FLASH PARTY CLAN
+    </p>
 
         <h1>
             AK<span>黙示録騎士</span>
@@ -1421,6 +1427,68 @@ footer::before {
 
 </style>
 <style>
+
+/* =========================
+   AK LOGO
+========================= */
+
+.ak-logo {
+    display: block;
+    width: min(260px, 65vw);
+    height: auto;
+    margin: 0 auto 25px;
+
+    object-fit: contain;
+
+    filter:
+        drop-shadow(0 0 8px rgba(255, 0, 0, 0.35))
+        drop-shadow(0 0 25px rgba(255, 0, 0, 0.2));
+
+    animation:
+        logoGlow 3s ease-in-out infinite;
+
+    transition: 0.4s;
+}
+
+.ak-logo:hover {
+    transform: scale(1.04);
+
+    filter:
+        drop-shadow(0 0 12px rgba(255, 0, 0, 0.6))
+        drop-shadow(0 0 35px rgba(255, 0, 0, 0.35));
+}
+
+@keyframes logoGlow {
+
+    0% {
+        filter:
+            drop-shadow(
+                0 0 6px
+                rgba(255, 0, 0, 0.25)
+            );
+    }
+
+    50% {
+        filter:
+            drop-shadow(
+                0 0 15px
+                rgba(255, 0, 0, 0.55)
+            )
+            drop-shadow(
+                0 0 30px
+                rgba(255, 0, 0, 0.2)
+            );
+    }
+
+    100% {
+        filter:
+            drop-shadow(
+                0 0 6px
+                rgba(255, 0, 0, 0.25)
+            );
+    }
+}
+
 
 /* =========================
    MOBILE
